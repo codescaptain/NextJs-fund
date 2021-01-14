@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import slug from 'slug'
 import Layout from './../components/Layout';
 import unfetch from 'isomorphic-unfetch'
 function HomePage({ charecters }) {
@@ -13,7 +14,7 @@ function HomePage({ charecters }) {
             {
                charecters.results.map((charecter,key)=>(
                 <li key={key}>
-                <Link href="/character/[id]" as={`/character/${charecter.id}`}>
+                <Link href="/character/[slug]" as={`/character/${slug(charecter.name)}-${charecter.id}`}>
                 <a>{charecter.name}</a>
                 </Link>
                 </li>
