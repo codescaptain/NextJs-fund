@@ -4,7 +4,7 @@ import Layout from './../components/Layout';
 function HomePage() {
     return <Layout>
         <Head>
-            <title>Home Bitch</title>
+            <title>Home </title>
         </Head>
         <h1>Welcome to Next.js!</h1>
         <p>Ahmet</p>
