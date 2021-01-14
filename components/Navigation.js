@@ -1,15 +1,35 @@
- import Link from 'next/link';
- function Navigation() {
+import Link from 'next/link';
+import { Container, Text, Grid, Box } from "@chakra-ui/react"
+function Navigation() {
     return (
-        <nav>
-        <Link href="/">
-            <a>Anasayfa</a>
-        </Link>
-        <Link href="/about">
-            <a>Hakkımda</a>
-        </Link>
+        <Container  centerContent mt={6}>
+            <Grid  templateColumns="repeat(3, 1fr)" gap={3}>
+                <Box w="100%" h="10"  >
+                    <Link href="/">
+                        <a>
+                            <Text fontSize="25px" color="tomato">
+                                Homepage
+                  </Text>
+                        </a>
+                    </Link>
+                </Box>
 
-    </nav>
+                <Box w="100%" h="10"  >
+                <Link href="/about">
+                    <a>
+                        <Text fontSize="25px" color="tomato">
+                            About
+                  </Text>
+                    </a>
+                </Link>
+                </Box>
+
+            </Grid>
+
+
+
+
+        </Container>
     );
 }
 
